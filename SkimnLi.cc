@@ -50,6 +50,7 @@ void SkimnLi::InitInput(const char* filename)
     T->SetBranchAddress("mX", &mX);
     T->SetBranchAddress("mY", &mY);
     T->SetBranchAddress("mZ", &mZ);
+    T->SetBranchAddress("mPSD", &mPSD);
 
     T->SetBranchAddress("vSeg", &vSeg);
     T->SetBranchAddress("vE", &vE);
@@ -78,6 +79,7 @@ void SkimnLi::InitOutput(const char* outname)
     T_out->Branch("mX", &mX);
     T_out->Branch("mY", &mY);
     T_out->Branch("mZ", &mZ);
+    T_out->Branch("mPSD", &mPSD);
 
     TTree *T_run = (TTree*)rootFile->Get("Run");
     outFile->cd();
@@ -105,7 +107,7 @@ void SkimnLi::Scan(int n)
 
     while (i<maxEvent) {
         // int span_events = 0;
-        if (i%1000 == 0) {cout << i << " nLi events out of " << maxEvent << " done." << endl; }
+        if (i%10000 == 0) {cout << i << " nLi events out of " << maxEvent << " done." << endl; }
         double span_window = 0;
 
         currentEntry = list->GetEntry(i);

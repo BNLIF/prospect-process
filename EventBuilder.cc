@@ -87,9 +87,11 @@ void EventBuilder::InitOutput(const char* outname)
     T_run->Write();
 }
 
-void EventBuilder::Scan(int n)
+void EventBuilder::Scan(long n)
 {
-    for (int i=0; i<n; i++) {
+    if (n==-1) { n = T->GetEntries(); }
+
+    for (long i=0; i<n; i++) {
         T->GetEntry(currentEntry);
         if (currentEvent!=evt) {
             if(Keep()) {

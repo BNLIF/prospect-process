@@ -42,6 +42,7 @@ public:
     float mX;
     float mY;
     float mZ;
+    float mPSD;
 
 private:
     // void Collect();

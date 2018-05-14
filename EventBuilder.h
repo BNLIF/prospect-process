@@ -14,7 +14,7 @@ public:
 
     void InitInput(const char* filename);
     void InitOutput(const char* outname);
-    void Scan(int n);
+    void Scan(long n=-1);
     bool Keep();
 
     TFile *rootFile;
