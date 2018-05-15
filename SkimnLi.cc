@@ -107,7 +107,7 @@ void SkimnLi::Scan(int n)
 
     while (i<maxEvent) {
         // int span_events = 0;
-        if (i%10000 == 0) {cout << i << " nLi events out of " << maxEvent << " done." << endl; }
+        // if (i%10000 == 0) {cout << i << " nLi events out of " << maxEvent << " done." << endl; }
         double span_window = 0;
 
         currentEntry = list->GetEntry(i);

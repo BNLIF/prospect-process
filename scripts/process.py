@@ -4,7 +4,7 @@ import os, sys, glob, shutil, threading, multiprocessing
 option_list = ['bundle', 'nLi']
 data_from = {
     'bundle' : 'data_0',
-    'nLi' : 'data',
+    'nLi' : 'data_bundle',
 }
 
 def main(filename, option):
