@@ -43,7 +43,7 @@ void SkimnLi::InitInput(const char* filename)
     T->SetBranchAddress("E_total", &E_total);
     T->SetBranchAddress("wPSD", &wPSD);
     T->SetBranchAddress("t0", &t0);
-    // T->SetBranchAddress("dt_last", &dt_last);
+    T->SetBranchAddress("ts_runstart", &ts_runstart);
 
     T->SetBranchAddress("mE", &mE);
     T->SetBranchAddress("mSeg", &mSeg);
@@ -67,7 +67,6 @@ void SkimnLi::InitOutput(const char* outname)
     T_out->Branch("wPSD", &wPSD);
     T_out->Branch("t0", &t0);
     T_out->Branch("ts_runstart", &ts_runstart);
-    // T_out->Branch("dt_last", &dt_last);
 
     T_out->Branch("vSeg", vSeg);
     T_out->Branch("vE", vE);

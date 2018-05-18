@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 import os, sys, glob, shutil, threading, multiprocessing
 
-option_list = ['bundle', 'nLi']
+option_list = ['bundle', 'nLi', 'nLiCoincidence']
 data_from = {
     'bundle' : 'data_0',
     'nLi' : 'data_bundle',
+    'nLiCoincidence': 'data_nLi',
 }
 
 def main(filename, option):
@@ -22,7 +23,7 @@ def main(filename, option):
     cmds = []
     for f in list_of_files:
         of = f.replace(to_replace, "_"+option)
-        of = of.replace(data_from[option], "data_"+option)
+        # of = of.replace(data_from[option], "data_"+option)
         dirname = os.path.dirname(of)
         if not (os.path.exists(dirname)):
             os.makedirs(dirname)

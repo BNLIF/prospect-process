@@ -5,7 +5,6 @@
 
 class TFile;
 class TTree;
-class Geometry;
 
 class SkimnLi {
 public:
@@ -21,7 +20,7 @@ public:
 
     TFile *rootFile;
     TFile *outFile;
-    Geometry *geo;
+    // Geometry *geo;
     double DT_WINDOW; // one-side time window in ms
 
     //input

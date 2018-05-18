@@ -11,5 +11,6 @@ void loadClasses()
     gROOT->ProcessLine( load + prefix + "/Geometry.cc+" );
     gROOT->ProcessLine( load + prefix + "/EventBuilder.cc+" );
     gROOT->ProcessLine( load + prefix + "/SkimnLi.cc+" );
+    gROOT->ProcessLine( load + prefix + "/BundlenLi.cc+" );
 
 }
